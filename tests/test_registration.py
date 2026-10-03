@@ -21,16 +21,3 @@ def test_successful_registration(chromium_page):
         dashboard_header = chromium_page.get_by_test_id('dashboard-toolbar-title-text')
         expect(dashboard_header).to_be_visible()
 
-
-'''
-
-        context.storage_state(path='browser-state.json')
-    with sync_playwright() as playwright:
-        browser = playwright.chromium.launch(headless=False)
-        context = browser.new_context(storage_state='browser-state.json')
-        page = context.new_page()
-
-        page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#dashboard")
-
-        page.wait_for_timeout(5000)
-'''
