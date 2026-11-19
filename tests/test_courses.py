@@ -24,7 +24,6 @@ def test_create_course(create_course_page: CreateCoursePage, courses_list_page: 
         max_score='0',
         min_score='0'
     )
-
     create_course_page.create_course_exercises_toolbar_view.check_visible()
     create_course_page.check_visible_exercises_empty_view()
     create_course_page.image_upload_widget.upload_preview_image('./testdata/files/image.png')
@@ -46,4 +45,3 @@ def test_create_course(create_course_page: CreateCoursePage, courses_list_page: 
         min_score="10",
         estimated_time="2 weeks"
     )
-
