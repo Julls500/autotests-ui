@@ -22,4 +22,3 @@ class LoginFormComponent(BaseComponent):
 
         expect(self.password_input).to_be_visible()
         expect(self.password_input).to_have_value(password)
-

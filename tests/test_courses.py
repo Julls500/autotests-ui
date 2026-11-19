@@ -2,6 +2,7 @@ import pytest
 from pages.create_course_page import CreateCoursePage
 from pages.courses_list_page import CoursesListPage
 
+
 @pytest.mark.regression
 @pytest.mark.courses
 def test_empty_courses_list(courses_list_page: CoursesListPage):
@@ -10,6 +11,7 @@ def test_empty_courses_list(courses_list_page: CoursesListPage):
     courses_list_page.sidebar.check_visible()
     courses_list_page.toolbar_view.check_visible()
     courses_list_page.check_visible_empty_view()
+
 
 @pytest.mark.regression
 @pytest.mark.courses
