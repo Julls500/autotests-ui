@@ -7,7 +7,9 @@ from components.views.image_upload_widget_component import ImageUploadWidgetComp
 from components.courses.create_course_exercise_form_component import CreateCourseExerciseFormComponent
 from components.courses.create_course_form_component import CreateCourseFormComponent
 from components.courses.create_course_toolbar_view_component import CreateCourseToolbarViewComponent
-from components.courses.create_course_exercises_toolbar_view_component import CreateCourseExercisesToolbarViewComponent
+from components.courses.create_course_exercises_toolbar_view_component import (
+    CreateCourseExercisesToolbarViewComponent
+)
 
 
 class CreateCoursePage(BasePage):

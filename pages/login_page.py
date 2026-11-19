@@ -10,7 +10,9 @@ class LoginPage(BasePage):
 
         self.login_form = LoginFormComponent(page)
 
-        self.wrong_email_or_password_alert = page.get_by_test_id('login-page-wrong-email-or-password-alert')
+        self.wrong_email_or_password_alert = page.get_by_test_id(
+            'login-page-wrong-email-or-password-alert'
+        )
         self.login_button = page.get_by_test_id('login-page-login-button')
         self.registration_link = page.get_by_test_id('login-page-registration-link')
 

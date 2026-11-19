@@ -11,7 +11,9 @@ class CreateCourseExerciseFormComponent(BaseComponent):
     def check_visible(self, index: int, title: str, description: str):
         subtitle = self.page.get_by_test_id(f"create-course-exercise-{index}-box-toolbar-subtitle-text")
         title_input = self.page.get_by_test_id(f"create-course-exercise-form-title-{index}-input")
-        description_input = self.page.get_by_test_id(f"create-course-exercise-form-description-{index}-input")
+        description_input = self.page.get_by_test_id(
+            f"create-course-exercise-form-description-{index}-input"
+        )
 
         expect(subtitle).to_be_visible()
         expect(subtitle).to_have_text(f"#{index + 1} Exercise")
@@ -24,7 +26,9 @@ class CreateCourseExerciseFormComponent(BaseComponent):
 
     def fill(self, index: int, title: str, description: str):
         title_input = self.page.get_by_test_id(f"create-course-exercise-form-title-{index}-input")
-        description_input = self.page.get_by_test_id(f"create-course-exercise-form-description-{index}-input")
+        description_input = self.page.get_by_test_id(
+            f"create-course-exercise-form-description-{index}-input"
+        )
 
         title_input.fill(title)
         expect(title_input).to_have_value(title)
