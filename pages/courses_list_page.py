@@ -7,6 +7,7 @@ from components.navigation.navbar_component import NavbarComponent
 from components.views.empty_view_component import EmptyViewComponent
 from components.courses.course_view_component import CourseViewComponent
 
+
 class CoursesListPage(BasePage):
     def __init__(self, page: Page):
         super().__init__(page)

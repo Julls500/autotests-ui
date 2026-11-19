@@ -15,7 +15,10 @@ def test_empty_courses_list(courses_list_page: CoursesListPage):
 
 @pytest.mark.regression
 @pytest.mark.courses
-def test_create_course(create_course_page: CreateCoursePage, courses_list_page: CoursesListPage):
+def test_create_course(
+        create_course_page: CreateCoursePage,
+        courses_list_page: CoursesListPage
+):
     create_course_page.visit('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create')
     create_course_page.create_course_toolbar.check_visible(is_create_course_disabled=True)
     create_course_page.image_upload_widget.check_visible(is_image_uploaded=False)
