@@ -7,6 +7,7 @@ class BaseElement:
         self.name = name
         self.locator = locator
 
+
     # Метод принимает кейворд аргументы (kwargs)
     def get_locator(self, **kwargs) -> Locator: # объект Locator для взаимодействия с элементом
         # Инициализирует объект локатора, подставляя динамические значения в локатор.
