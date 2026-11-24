@@ -7,7 +7,6 @@ class BaseElement:
         self.name = name
         self.locator = locator
 
-
     # Метод принимает кейворд аргументы (kwargs)
     def get_locator(self, nth: int = 0, **kwargs) -> Locator:
         # Добавляем аргумент nth со значением по умолчанию 0
