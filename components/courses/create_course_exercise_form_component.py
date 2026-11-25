@@ -1,4 +1,4 @@
-from components.base_component import BaseComponent, expect
+from components.base_component import BaseComponent
 from elements.button import Button
 from elements.input import Input
 from elements.text import Text
