@@ -1,22 +1,25 @@
 import pytest
 import allure
 
-from allure_commons.types import Severity # Импортируем enum Severity из Allure
+from allure_commons.types import Severity
 from pages.authentication.login_page import LoginPage
 from pages.authentication.registration_page import RegistrationPage
 from pages.dashboard.dashboard_page import DashboardPage
-from tools.allure.tags import AllureTag # Импортируем enum AllureTag
-from tools.allure.epics import AllureEpic # Импортируем enum AllureEpic
-from tools.allure.features import AllureFeature # Импортируем enum AllureFeature
-from tools.allure.stories import AllureStory # Импортируем enum AllureStory
+from tools.allure.tags import AllureTag
+from tools.allure.epics import AllureEpic
+from tools.allure.features import AllureFeature
+from tools.allure.stories import AllureStory
 
 
 @pytest.mark.regression
 @pytest.mark.authorization
-@allure.tag(AllureTag.REGRESSION, AllureTag.AUTHORIZATION) # Используем enum
-@allure.epic(AllureEpic.LMS) # Добавили epic
-@allure.feature(AllureFeature.AUTHENTICATION) # Добавили feature
-@allure.story(AllureStory.AUTHORIZATION) # Добавили story
+@allure.tag(AllureTag.REGRESSION, AllureTag.AUTHORIZATION)
+@allure.epic(AllureEpic.LMS)
+@allure.feature(AllureFeature.AUTHENTICATION)
+@allure.story(AllureStory.AUTHORIZATION)
+@allure.parent_suite(AllureEpic.LMS)
+@allure.suite(AllureFeature.AUTHENTICATION)
+@allure.sub_suite(AllureStory.AUTHORIZATION)
 class TestAuthorization:
     @pytest.mark.parametrize(
         "email, password",
